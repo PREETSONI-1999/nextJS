@@ -1,0 +1,61 @@
+.messageSlider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: none;
+  position: relative;
+  background-color: #1a1a1a; /* Set a dark background color */
+}
+
+.templeContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 300px;
+  background-color: #1a1a1a; /* Temple background color */
+  border-radius: 0 0 40% 40%; /* Shape the bottom corners for the temple roof */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Enhance shadow */
+}
+
+.message {
+  opacity: 0;
+  font-size: 2em; /* Start with a base font size */
+  transition: opacity 1s ease-in-out, font-size 1s ease-in-out; /* Slower transition */
+  background-color: #1a1a1a; /* Set a dark background color for the message */
+  padding: 15px 25px; /* Add some padding */
+  border-radius: 10px; /* Round the corners */
+  font-family: 'Georgia', serif; /* Choose a religious-looking font */
+  color: #fff; /* Set text color to white */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.message.active {
+  opacity: 1;
+  font-size: 5em; /* Increase font size */
+  animation: lightEffect 3s infinite alternate; /* Add a light effect animation */
+}
+
+.displayLinebreak {
+  white-space: pre-line;
+}
+
+@keyframes lightEffect {
+  0% {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.6);
+  }
+}
+
